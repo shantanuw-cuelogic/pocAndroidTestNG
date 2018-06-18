@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="1" parallel="tests" verbose="1">
+
+<!--
+  <test name="Test on Samsung S7">
+  <parameter name="platform" value="Android 6"/>
+  <parameter name="deviceNAME" value="ce0716070c14832902"/>
+  <parameter name="systemPort" value="8200"/>
+  <parameter name="username" value="qa@os8.com"/>
+  <parameter name="password" value="asdf"/>
+    <classes>
+      <class name="com.zimplistic.rotimatic.testcases.parallelPOC"/>
+    </classes>
+  </test>
+-->
+
+
+  <test name="Test on Moto G5">
+  <parameter name="platform" value="Android 7.0"/>
+  <parameter name="deviceNAME" value="172.21.31.216:5555"/>
+  <parameter name="systemPort" value="8299"/>
+  <parameter name="username" value="qa@android.com"/>
+  <parameter name="password" value="asdf"/>
+    <classes>
+      <class name="com.zimplistic.rotimatic.testcases.parallelPOC"/>
+    </classes>
+  </test>
+
+ 
+<!--
+  <test name="Test on Samsunag A3">
+  <parameter name="platform" value="Android 5.0"/>
+  <parameter name="deviceNAME" value="172.21.32.51:5555"/>
+  <parameter name="systemPort" value="8300"/>
+  <parameter name="username" value="qa@os5.com"/>
+  <parameter name="password" value="asdf"/>
+    <classes>
+      <class name="com.zimplistic.rotimatic.testcases.parallelPOC"/>
+    </classes>
+  </test>
+ --> 
+  
+</suite> 

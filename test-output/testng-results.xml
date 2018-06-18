@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="108036" started-at="2018-06-18T11:33:01Z" finished-at="2018-06-18T11:34:49Z">
+    <groups>
+    </groups>
+    <test name="Test on Moto G5" duration-ms="108036" started-at="2018-06-18T11:33:01Z" finished-at="2018-06-18T11:34:49Z">
+      <class name="com.zimplistic.rotimatic.testcases.parallelPOC">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a]" name="setup" is-config="true" duration-ms="33556" started-at="2018-06-18T11:33:01Z" finished-at="2018-06-18T11:33:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android 7.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[172.21.31.216:5555]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[8299]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loginCheck()[pri:0, instance:com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a]" name="loginCheck" duration-ms="29247" started-at="2018-06-18T11:33:35Z" finished-at="2018-06-18T11:34:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginCheck -->
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:1, instance:com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a]" name="testLogin" duration-ms="20269" started-at="2018-06-18T11:34:04Z" finished-at="2018-06-18T11:34:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa@android.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[asdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="settingsScreen()[pri:2, instance:com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a]" name="settingsScreen" duration-ms="15878" started-at="2018-06-18T11:34:24Z" finished-at="2018-06-18T11:34:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingsScreen -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a]" name="teardown" is-config="true" duration-ms="9057" started-at="2018-06-18T11:34:40Z" finished-at="2018-06-18T11:34:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.zimplistic.rotimatic.testcases.parallelPOC -->
+    </test> <!-- Test on Moto G5 -->
+  </suite> <!-- Suite -->
+</testng-results>

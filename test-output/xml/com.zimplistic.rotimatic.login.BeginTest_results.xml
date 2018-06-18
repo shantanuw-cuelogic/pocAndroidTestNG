@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LoginTestSuite"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="81.890">
+  <properties />
+  
+  
+            <testcase name="webViewTest" time="47.417" classname="com.zimplistic.rotimatic.login.BeginTest" />
+                <testcase name="splashScreen" time="34.473" classname="com.zimplistic.rotimatic.login.BeginTest" />
+      
+</testsuite>
