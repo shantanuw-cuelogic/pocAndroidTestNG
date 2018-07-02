@@ -12,7 +12,6 @@ import io.appium.java_client.android.AndroidElement;
 
 public class LoginPage {
 	
-	//AndroidDriver driver = BaseSetupManager.getInstance().getAndroidDriver();
 	WebElement element = null;
 
 	//Sign In button

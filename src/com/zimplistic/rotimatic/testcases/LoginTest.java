@@ -64,6 +64,7 @@ public class LoginTest {
 
 	}
 
+	@Parameters({ "username", "password" })
 	public void signIn(String username, String password) throws Exception {
 
 		signIn = loginpage.getSignIn(ad);

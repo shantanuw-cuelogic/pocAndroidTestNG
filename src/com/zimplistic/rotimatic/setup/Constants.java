@@ -17,5 +17,6 @@ public interface Constants {
 	String FOLDER_CHAT = "Chat_test";
 	String FOLDER_NETWORKTEST = "No_Network_test";
 	String FOLDER_RECIPE = "Recipe_test";
+	String FOLDER_REMOTE_CONTROL = "RC_test";
 
 }

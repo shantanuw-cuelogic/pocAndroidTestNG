@@ -43,18 +43,15 @@ public class parallelPOC implements Constants {
 	private AndroidDriver<MobileElement> ad;
 	LoginPage loginpage = new LoginPage();
 	WebElement signIn, email, passkey, login, hammenu;
-	
 
-
-//	 @BeforeSuite
-//	  public void startServer() throws Exception { 
-//		 // START APPIUM SERVER
-//		 System.out.println("Starting appium server");
-//		 Runtime.getRuntime().exec("ssh -t http://172.21.32.70 \"appium &\"");
-//		 Thread.sleep(20000);
-//	  
-//	 }
-	 
+	// @BeforeSuite
+	// public void startServer() throws Exception {
+	// // START APPIUM SERVER
+	// System.out.println("Starting appium server");
+	// Runtime.getRuntime().exec("ssh -t http://172.21.32.70 \"appium &\"");
+	// Thread.sleep(20000);
+	//
+	// }
 
 	@BeforeTest(alwaysRun = true)
 	@Parameters({ "platform", "deviceNAME", "systemPort" })
@@ -78,7 +75,8 @@ public class parallelPOC implements Constants {
 			capabilities.setCapability("systemPort", systemPort);
 
 			// Make apk path public accessible
-			capabilities.setCapability(MobileCapabilityType.APP, "D:\\shantanu\\android\\build-tools\\reskin-1.4.apk");
+			capabilities.setCapability(MobileCapabilityType.APP, "D:\\Android\\Sdk\\build-tools\\rc-4.6.apk");
+			// "/Users/shantanuwagholikar/Documents/shantanu_wagholikar/reskin-1.4.apk");
 			// local D:\\Android\\Sdk\\build-tools\\reskin-1.4.apk
 			// for remote machine
 			// capabilities.setCapability(CapabilityType.PLATFORM, "Windows");
@@ -96,9 +94,16 @@ public class parallelPOC implements Constants {
 					"com.zimplistic.rotimaticmobile.activity.SplashActivity");
 
 			try {
-				ad = new AndroidDriver<MobileElement>(new URL("http://172.21.32.70:4723/wd/hub"), capabilities);
+				ad = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
 
-			} catch (NumberFormatException e) {
+				// ad = new AndroidDriver<MobileElement>(new URL(
+				// "http://shantanuw.cuelogic:9ef959b6-0551-42d1-83ee-a1a54adba778@ondemand.saucelabs.com/wd/hub"
+				// ), capabilities);
+
+				// ad = new AndroidDriver<MobileElement>(new
+				// URL("https://eu1.appium.testobject.com/wd/hub"),capabilities);
+
+			} catch (Exception e) {
 
 				e.printStackTrace();
 			}
@@ -260,8 +265,7 @@ public class parallelPOC implements Constants {
 
 			}
 
-		} else if (ad.findElementById("com.zimplistic.rotimaticmobile:id/toolbar_title").getText()
-				.contains("Home"))
+		} else if (ad.findElementById("com.zimplistic.rotimaticmobile:id/toolbar_title").getText().contains("Home"))
 			System.out.println("User is logged in to app");
 	}
 
@@ -351,8 +355,9 @@ public class parallelPOC implements Constants {
 
 		System.out.println("End of test suite");
 
+		// uninstall app
+		Runtime.getRuntime().exec("adb uninstall com.zimplistic.rotimaticmobile"); 
 		// ad.close();
 	}
 
-	
 }

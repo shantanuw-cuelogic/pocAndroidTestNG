@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test on Samsung S7</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jun 15 18:53:46 IST 2018</td>
+<td>Started on:</td><td>Fri Jun 29 19:00:05 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>71 seconds (71553 ms)</td>
+<tr><td>Total time:</td><td>119 seconds (119178 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,49 +68,6 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.zimplistic.rotimatic.testcases.parallelPOC.teardown()'><b>teardown</b><br>Test class: com.zimplistic.rotimatic.testcases.parallelPOC</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.signOut(parallelPOC.java:298)
-	at com.zimplistic.rotimatic.testcases.parallelPOC.teardown(parallelPOC.java:351)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace342351523", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace342351523'><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.signOut(parallelPOC.java:298)
-	at com.zimplistic.rotimatic.testcases.parallelPOC.teardown(parallelPOC.java:351)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.afterRun(TestRunner.java:725)
-	at org.testng.TestRunner.run(TestRunner.java:509)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-<td>3</td>
-<td>com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -118,16 +75,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zimplistic.rotimatic.testcases.parallelPOC.loginCheck()'><b>loginCheck</b><br>Test class: com.zimplistic.rotimatic.testcases.parallelPOC</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.loginCheck(parallelPOC.java:196)
+<td title='com.zimplistic.rotimatic.testcases.RemoteControlWidget.settingsScreen()'><b>settingsScreen</b><br>Test class: com.zimplistic.rotimatic.testcases.RemoteControlWidget</td>
+<td><div><pre>java.lang.AssertionError: User is not associated with any Rotimatic
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.settingsScreen(RemoteControlWidget.java:126)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace115745767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace115745767'><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.loginCheck(parallelPOC.java:196)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace733416470", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace733416470'><pre>java.lang.AssertionError: User is not associated with any Rotimatic
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.settingsScreen(RemoteControlWidget.java:126)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -149,19 +107,69 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>0</td>
-<td>com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a</td></tr>
+<td>29</td>
+<td>com.zimplistic.rotimatic.testcases.RemoteControlWidget@7c16905e</td></tr>
 <tr>
-<td title='com.zimplistic.rotimatic.testcases.parallelPOC.settingsScreen()'><b>settingsScreen</b><br>Test class: com.zimplistic.rotimatic.testcases.parallelPOC</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.settingsScreen(parallelPOC.java:320)
+<td title='com.zimplistic.rotimatic.testcases.RemoteControlWidget.testRemoteControlState()'><b>testRemoteControlState</b><br>Test class: com.zimplistic.rotimatic.testcases.RemoteControlWidget</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.16 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;shantanu-pc&apos;, ip: &apos;169.254.224.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=6, automationName=uiautomator2, unicodeKeyboard=false, udid=172.21.32.47:5555, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8200}]
+Session ID: 010c4c65-ee79-423e-82cd-643c7871c352
+*** Element info: {Using=id, value=com.zimplistic.rotimaticmobile:id/tvRemoteStatus}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.getCurrentRTState(RemoteControlWidget.java:227)
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.testRemoteControlState(RemoteControlWidget.java:142)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1930121604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1930121604'><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.settingsScreen(parallelPOC.java:320)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1825457015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1825457015'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.16 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;shantanu-pc&apos;, ip: &apos;169.254.224.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=6, automationName=uiautomator2, unicodeKeyboard=false, udid=172.21.32.47:5555, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8200}]
+Session ID: 010c4c65-ee79-423e-82cd-643c7871c352
+*** Element info: {Using=id, value=com.zimplistic.rotimaticmobile:id/tvRemoteStatus}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.getCurrentRTState(RemoteControlWidget.java:227)
+	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.testRemoteControlState(RemoteControlWidget.java:142)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -183,42 +191,31 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>5</td>
-<td>com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a</td></tr>
+<td>21</td>
+<td>com.zimplistic.rotimatic.testcases.RemoteControlWidget@7c16905e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='com.zimplistic.rotimatic.testcases.parallelPOC.testLogin()'><b>testLogin</b><br>Test class: com.zimplistic.rotimatic.testcases.parallelPOC<br>Parameters: qa@os8.com, asdf</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.testLogin(parallelPOC.java:240)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace859123009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace859123009'><pre>java.lang.NullPointerException
-	at com.zimplistic.rotimatic.testcases.parallelPOC.testLogin(parallelPOC.java:240)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
+<td title='com.zimplistic.rotimatic.testcases.RemoteControlWidget.setup()'><b>setup</b><br>Test class: com.zimplistic.rotimatic.testcases.RemoteControlWidget<br>Parameters: Android 6, 172.21.32.47:5555, 8200</td>
+<td></td>
+<td>22</td>
+<td>com.zimplistic.rotimatic.testcases.RemoteControlWidget@7c16905e</td></tr>
+<tr>
+<td title='com.zimplistic.rotimatic.testcases.RemoteControlWidget.testLogin()'><b>testLogin</b><br>Test class: com.zimplistic.rotimatic.testcases.RemoteControlWidget<br>Parameters:  ios5@mailinator.com, asdf</td>
+<td></td>
+<td>46</td>
+<td>com.zimplistic.rotimatic.testcases.RemoteControlWidget@7c16905e</td></tr>
+<tr>
+<td title='com.zimplistic.rotimatic.testcases.RemoteControlWidget.testRotiCount()'><b>testRotiCount</b><br>Test class: com.zimplistic.rotimatic.testcases.RemoteControlWidget</td>
+<td></td>
 <td>0</td>
-<td>com.zimplistic.rotimatic.testcases.parallelPOC@39c0f4a</td></tr>
+<td>com.zimplistic.rotimatic.testcases.RemoteControlWidget@7c16905e</td></tr>
 </table><p>
 </body>
 </html>

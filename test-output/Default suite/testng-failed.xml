@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.parallelPOC">
+      <class name="com.zimplistic.rotimatic.testcases.SamplePCloudyTestiOS">
         <methods>
-          <include name="loginCheck"/>
-          <include name="setup"/>
+          <include name="prepareTest"/>
+          <include name="runExecutionOnPCloudy"/>
           <include name="testLogin"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.zimplistic.rotimatic.testcases.parallelPOC -->
+      </class> <!-- com.zimplistic.rotimatic.testcases.SamplePCloudyTestiOS -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

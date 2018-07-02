@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="1" name="Test on Moto G5(failed)" parallel="tests">
+  <test thread-count="1" name="Test on Samsung S7(failed)" parallel="tests">
     <parameter name="password" value="asdf"/>
-    <parameter name="deviceNAME" value="172.21.31.216:5555"/>
-    <parameter name="platform" value="Android 7.0"/>
-    <parameter name="systemPort" value="8299"/>
-    <parameter name="username" value="qa@android.com"/>
+    <parameter name="deviceNAME" value="172.21.32.47:5555"/>
+    <parameter name="platform" value="Android 6"/>
+    <parameter name="systemPort" value="8200"/>
+    <parameter name="username" value=" ios5@mailinator.com"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.parallelPOC">
+      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget">
         <methods>
-          <include name="loginCheck"/>
-          <include name="setup"/>
-          <include name="testLogin"/>
-          <include name="teardown"/>
+          <include name="testRemoteControlState"/>
           <include name="settingsScreen"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.zimplistic.rotimatic.testcases.parallelPOC -->
+      </class> <!-- com.zimplistic.rotimatic.testcases.RemoteControlWidget -->
     </classes>
-  </test> <!-- Test on Moto G5(failed) -->
+  </test> <!-- Test on Samsung S7(failed) -->
 </suite> <!-- Failed suite [Suite] -->

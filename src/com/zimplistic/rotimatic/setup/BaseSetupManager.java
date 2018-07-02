@@ -15,6 +15,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -23,57 +24,65 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-
 public class BaseSetupManager implements Constants {
 
 	private static final String TAG = BaseSetupManager.class.getSimpleName();
 	private static BaseSetupManager manager;
 	private AndroidDriver<MobileElement> ad;
 
-	
 	private BaseSetupManager(String platform, String deviceNAME, String systemPort) {
 		try {
+
+			String[] platformInfo = platform.split(" ");
 
 			// first time declaration
 			// Capabilities should be same as declared in Appium settings
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			
+
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
-			
-			//capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "172.21.32.47");
-			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceNAME);
-			
+
+			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android test");
+
+			capabilities.setCapability(MobileCapabilityType.UDID, deviceNAME);
+
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platformInfo[0]);
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformInfo[1]);
 			capabilities.setCapability("systemPort", systemPort);
-			
-			capabilities.setCapability(CapabilityType.PLATFORM, "Android");
 
-			capabilities.setCapability(MobileCapabilityType.APP, "D:\\Android\\Sdk\\build-tools\\RT_1.1.apk");
-
-			capabilities.setCapability(CapabilityType.VERSION, platform);
-			// capabilities.setCapability(CapabilityType.PLATFORM, "Windows");
-			
+			// Make apk path public accessible
+			capabilities.setCapability(MobileCapabilityType.APP, "D:\\Android\\Sdk\\build-tools\\rc-4.6.apk");
+			// "/Users/shantanuwagholikar/Documents/shantanu_wagholikar/reskin-1.4.apk");
+			// local D:\\Android\\Sdk\\build-tools\\reskin-1.4.apk
 
 			// application package name
 			capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.zimplistic.rotimaticmobile");
+
+			capabilities.setCapability("noReset", true);
+
+			capabilities.setCapability("unicodeKeyboard", false);
+
 			// Application start Activity
 			capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
 					"com.zimplistic.rotimaticmobile.activity.SplashActivity");
 
-			capabilities.setCapability("noReset", true);
-			// capabilities.setCapability("noReset", true);
+			try {
+				ad = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
 
-			capabilities.setCapability("unicodeKeyboard", false);
+			} catch (Exception e) {
 
-			ad = new AndroidDriver<MobileElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
+				e.printStackTrace();
+			}
+			System.out.println("Remote driver connected");
 
 			ad.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		} catch (Exception e) {
+
 			e.printStackTrace();
+			Assert.fail("Appium server setup failed");
 		}
 	}
 
-	
 	public static BaseSetupManager getInstance(String platform, String deviceNAME, String systemPort) {
 		if (null == manager) {
 			manager = new BaseSetupManager(platform, deviceNAME, systemPort);
@@ -107,62 +116,51 @@ public class BaseSetupManager implements Constants {
 	}
 
 	public static void unistallApps() {
-		 String cmd = "adb shell getprop ro.build.version.release";
+		String cmd = "adb shell getprop ro.build.version.release";
 
-		 String osVersion=executeCommand(cmd);
-		 System.out.println("Current device os version is :- " +osVersion);
+		String osVersion = executeCommand(cmd);
+		System.out.println("Current device os version is :- " + osVersion);
 
-		     if(osVersion.contains("7") || osVersion.contains("8"))
-		     {
-		         //uninstall io.appium.settings
-		         cmd="adb uninstall io.appium.settings";
-		         executeCommand(cmd);
-		         System.out.println("settings unistalled");
-		         
-		         //uninstall io.appium.unlock
-		         cmd="adb uninstall io.appium.unlock";
-		         executeCommand(cmd);
-		         System.out.println("unlock unistalled");
-		         
-		     }
+		if (osVersion.contains("7") || osVersion.contains("8")) {
+			// uninstall io.appium.settings
+			cmd = "adb uninstall io.appium.settings";
+			executeCommand(cmd);
+			System.out.println("settings unistalled");
 
-		 
+			// uninstall io.appium.unlock
+			cmd = "adb uninstall io.appium.unlock";
+			executeCommand(cmd);
+			System.out.println("unlock unistalled");
+
+		}
+
 	}
-	
-	public static String executeCommand(String cmd)
-	 {
-	     String commandresponse="";
-	     try
-	     {
-	         Runtime run = Runtime.getRuntime();
-	         Process proc=run.exec(cmd);
-	         BufferedReader stdInput = new BufferedReader(new 
-	                 InputStreamReader(proc.getInputStream()));
 
-	         BufferedReader stdError = new BufferedReader(new 
-	                 InputStreamReader(proc.getErrorStream()));
+	public static String executeCommand(String cmd) {
+		String commandresponse = "";
+		try {
+			Runtime run = Runtime.getRuntime();
+			Process proc = run.exec(cmd);
+			BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
 
-	         String response=null;
-	         while ((response = stdInput.readLine()) != null) 
-	         {
-	             if(response.length()>0)
-	             {
-	                 commandresponse=commandresponse+response;
-	             }
-	         }
+			BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
 
-	         while ((response = stdError.readLine()) != null) 
-	         {
-	             commandresponse=commandresponse+response;
+			String response = null;
+			while ((response = stdInput.readLine()) != null) {
+				if (response.length() > 0) {
+					commandresponse = commandresponse + response;
+				}
+			}
 
-	         }
-	     }
-	     catch(Exception e)
-	     {
-	         e.printStackTrace();
-	     }
-	     //System.out.println(commandresponse);
-	     return commandresponse;
-	 }
+			while ((response = stdError.readLine()) != null) {
+				commandresponse = commandresponse + response;
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		// System.out.println(commandresponse);
+		return commandresponse;
+	}
 
 }
