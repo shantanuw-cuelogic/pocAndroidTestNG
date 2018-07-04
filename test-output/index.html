@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="settingsScreen">settingsScreen</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="testRemoteControlState">testRemoteControlState</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,17 +102,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="setup(Android 6, 172.21.32.47:5555, 8200)">setup(Android 6, 172.21.32.47:5555, 8200)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="settingsScreen">settingsScreen</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="testLogin( ios5@mailinator.com, asdf)">testLogin( ios5@mailinator.com, asdf)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="setup(Android 6, ce0716070c14832902, 8200)">setup(Android 6, ce0716070c14832902, 8200)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="testRotiCount">testRotiCount</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="testLogin(ios3@mailinator.com, asdf)">testLogin(ios3@mailinator.com, asdf)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.zimplistic.rotimatic.testcases.RemoteControlWidget" hash-for-method="testRemoteControlState">testRemoteControlState</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -146,67 +132,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.zimplistic.rotimatic.testcases.RemoteControlWidget</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="settingsScreen">
-                  </a> <!-- settingsScreen -->
-                  <span class="method-name">settingsScreen</span>
-                  <div class="stack-trace">java.lang.AssertionError: User is not associated with any Rotimatic
-	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.settingsScreen(RemoteControlWidget.java:126)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRemoteControlState">
-                  </a> <!-- testRemoteControlState -->
-                  <span class="method-name">testRemoteControlState</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20.16 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
-System info: host: &apos;shantanu-pc&apos;, ip: &apos;169.254.224.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=6, automationName=uiautomator2, unicodeKeyboard=false, udid=172.21.32.47:5555, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8200}]
-Session ID: 010c4c65-ee79-423e-82cd-643c7871c352
-*** Element info: {Using=id, value=com.zimplistic.rotimaticmobile:id/tvRemoteStatus}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
-	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
-	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.getCurrentRTState(RemoteControlWidget.java:227)
-	at com.zimplistic.rotimatic.testcases.RemoteControlWidget.testRemoteControlState(RemoteControlWidget.java:142)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -215,25 +140,32 @@ Session ID: 010c4c65-ee79-423e-82cd-643c7871c352
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="setup(Android 6, 172.21.32.47:5555, 8200)">
-                  </a> <!-- setup(Android 6, 172.21.32.47:5555, 8200) -->
+                  <a name="settingsScreen">
+                  </a> <!-- settingsScreen -->
+                  <span class="method-name">settingsScreen</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setup(Android 6, ce0716070c14832902, 8200)">
+                  </a> <!-- setup(Android 6, ce0716070c14832902, 8200) -->
                   <span class="method-name">setup</span>
-                  <span class="parameters">(Android 6, 172.21.32.47:5555, 8200)</span>
+                  <span class="parameters">(Android 6, ce0716070c14832902, 8200)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin( ios5@mailinator.com, asdf)">
-                  </a> <!-- testLogin( ios5@mailinator.com, asdf) -->
+                  <a name="testLogin(ios3@mailinator.com, asdf)">
+                  </a> <!-- testLogin(ios3@mailinator.com, asdf) -->
                   <span class="method-name">testLogin</span>
-                  <span class="parameters">( ios5@mailinator.com, asdf)</span>
+                  <span class="parameters">(ios3@mailinator.com, asdf)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testRotiCount">
-                  </a> <!-- testRotiCount -->
-                  <span class="method-name">testRotiCount</span>
+                  <a name="testRemoteControlState">
+                  </a> <!-- testRemoteControlState -->
+                  <span class="method-name">testRemoteControlState</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -250,10 +182,10 @@ Session ID: 010c4c65-ee79-423e-82cd-643c7871c352
 &lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test on Samsung S7&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;asdf&quot;/&gt;
-    &lt;parameter name=&quot;deviceNAME&quot; value=&quot;172.21.32.47:5555&quot;/&gt;
+    &lt;parameter name=&quot;deviceNAME&quot; value=&quot;ce0716070c14832902&quot;/&gt;
     &lt;parameter name=&quot;platform&quot; value=&quot;Android 6&quot;/&gt;
     &lt;parameter name=&quot;systemPort&quot; value=&quot;8200&quot;/&gt;
-    &lt;parameter name=&quot;username&quot; value=&quot; ios5@mailinator.com&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;ios3@mailinator.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.zimplistic.rotimatic.testcases.RemoteControlWidget&quot;/&gt;
     &lt;/classes&gt;
@@ -295,32 +227,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogin')
+data.setCell(0, 1, 'testRemoteControlState')
 data.setCell(0, 2, 'com.zimplistic.rotimatic.testcases.RemoteControlWidget')
-data.setCell(0, 3, 46622);
+data.setCell(0, 3, 227810);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'settingsScreen')
 data.setCell(1, 2, 'com.zimplistic.rotimatic.testcases.RemoteControlWidget')
-data.setCell(1, 3, 29004);
+data.setCell(1, 3, 49972);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'setup')
+data.setCell(2, 1, 'testLogin')
 data.setCell(2, 2, 'com.zimplistic.rotimatic.testcases.RemoteControlWidget')
-data.setCell(2, 3, 22057);
+data.setCell(2, 3, 46144);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testRemoteControlState')
+data.setCell(3, 1, 'setup')
 data.setCell(3, 2, 'com.zimplistic.rotimatic.testcases.RemoteControlWidget')
-data.setCell(3, 3, 21441);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testRotiCount')
-data.setCell(4, 2, 'com.zimplistic.rotimatic.testcases.RemoteControlWidget')
-data.setCell(4, 3, 1);
+data.setCell(3, 3, 19554);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -348,32 +276,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.zimplistic.rotimatic.testcases.RemoteControlWidget</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">setup(Android 6, 172.21.32.47:5555, 8200)</span>
+                <span class="method-name">setup(Android 6, ce0716070c14832902, 8200)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testLogin( ios5@mailinator.com, asdf)</span>
-                <span class="method-start">22060 ms</span>
+                <span class="method-name">testLogin(ios3@mailinator.com, asdf)</span>
+                <span class="method-start">19565 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">settingsScreen</span>
-                <span class="method-start">68685 ms</span>
+                <span class="method-start">65719 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testRemoteControlState</span>
-                <span class="method-start">97694 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testRotiCount</span>
-                <span class="method-start">119145 ms</span>
+                <span class="method-start">115691 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">119148 ms</span>
+                <span class="method-start">343511 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

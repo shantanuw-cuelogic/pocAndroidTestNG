@@ -5,14 +5,15 @@
 
   <test name="Test on Samsung S7">
   <parameter name="platform" value="Android 6"/>
-  <parameter name="deviceNAME" value="172.21.32.47:5555"/>
+  <parameter name="deviceNAME" value="ce0716070c14832902"/>
   <parameter name="systemPort" value="8200"/>
-  <parameter name="username" value=" ios5@mailinator.com"/>
+  <parameter name="username" value="ios3@mailinator.com"/>
   <parameter name="password" value="asdf"/>
     <classes>
       <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget"/>
     </classes>
   </test>
+
 
 
 <!--
@@ -20,13 +21,14 @@
   <parameter name="platform" value="Android 7.0"/>
   <parameter name="deviceNAME" value="ZY3227XH6M"/>
   <parameter name="systemPort" value="8299"/>
-  <parameter name="username" value="qa@android.com"/>
+  <parameter name="username" value="ios17@mailinator.com"/>
   <parameter name="password" value="asdf"/>
     <classes>
       <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget"/>
     </classes>
   </test>
 -->
+
  
 <!--
   <test name="Test on Samsunag A3">
