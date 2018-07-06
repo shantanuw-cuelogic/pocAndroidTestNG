@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="343532" started-at="2018-07-04T07:15:15Z" finished-at="2018-07-04T07:20:58Z">
+  <suite name="Suite" duration-ms="324883" started-at="2018-07-06T09:51:37Z" finished-at="2018-07-06T09:57:02Z">
     <groups>
     </groups>
-    <test name="Test on Samsung S7" duration-ms="343532" started-at="2018-07-04T07:15:15Z" finished-at="2018-07-04T07:20:58Z">
-      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zimplistic.rotimatic.testcases.RemoteControlWidget@ae45eb6]" name="setup" duration-ms="19554" started-at="2018-07-04T07:15:15Z" finished-at="2018-07-04T07:15:34Z">
+    <test name="Test on Moto G5" duration-ms="324883" started-at="2018-07-06T09:51:37Z" finished-at="2018-07-06T09:57:02Z">
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.zimplistic.rotimatic.testcases.WiFi_Configuration@ae45eb6]" name="setup" duration-ms="25507" started-at="2018-07-06T09:51:37Z" finished-at="2018-07-06T09:52:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Android 6]]>
+                <![CDATA[Android 7.0]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ce0716070c14832902]]>
+                <![CDATA[ZY3227XH6M]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[8200]]>
+                <![CDATA[8299]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:1, instance:com.zimplistic.rotimatic.testcases.RemoteControlWidget@ae45eb6]" name="testLogin" duration-ms="46144" started-at="2018-07-04T07:15:34Z" finished-at="2018-07-04T07:16:21Z">
+        <test-method status="PASS" signature="testLogin(java.lang.String, java.lang.String)[pri:1, instance:com.zimplistic.rotimatic.testcases.WiFi_Configuration@ae45eb6]" name="testLogin" duration-ms="65809" started-at="2018-07-06T09:52:02Z" finished-at="2018-07-06T09:53:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ios3@mailinator.com]]>
+                <![CDATA[1ios@mailinator.com]]>
               </value>
             </param>
             <param index="1">
@@ -44,19 +44,92 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="settingsScreen()[pri:2, instance:com.zimplistic.rotimatic.testcases.RemoteControlWidget@ae45eb6]" name="settingsScreen" duration-ms="49972" started-at="2018-07-04T07:16:21Z" finished-at="2018-07-04T07:17:11Z">
+        <test-method status="PASS" signature="settingsScreen()[pri:2, instance:com.zimplistic.rotimatic.testcases.WiFi_Configuration@ae45eb6]" name="settingsScreen" duration-ms="49628" started-at="2018-07-06T09:53:08Z" finished-at="2018-07-06T09:53:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- settingsScreen -->
-        <test-method status="PASS" signature="testRemoteControlState()[pri:3, instance:com.zimplistic.rotimatic.testcases.RemoteControlWidget@ae45eb6]" name="testRemoteControlState" duration-ms="227810" started-at="2018-07-04T07:17:11Z" finished-at="2018-07-04T07:20:58Z">
+        <test-method status="FAIL" signature="testRemoteControlState(java.lang.String)[pri:3, instance:com.zimplistic.rotimatic.testcases.WiFi_Configuration@ae45eb6]" name="testRemoteControlState" duration-ms="183897" started-at="2018-07-06T09:53:58Z" finished-at="2018-07-06T09:57:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7500000F]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'shantanu-pc', ip: '169.254.224.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=7.0, automationName=uiautomator2, unicodeKeyboard=false, udid=ZY3227XH6M, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8299}]
+Session ID: 2260444e-a6ab-4b87-adc4-de08551b26a6
+*** Element info: {Using=xpath, value=//*[@text='Cuelogic']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'shantanu-pc', ip: '169.254.224.138', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=7.0, automationName=uiautomator2, unicodeKeyboard=false, udid=ZY3227XH6M, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8299}]
+Session ID: 2260444e-a6ab-4b87-adc4-de08551b26a6
+*** Element info: {Using=xpath, value=//*[@text='Cuelogic']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+at com.zimplistic.rotimatic.testcases.WiFi_Configuration.connectToRT(WiFi_Configuration.java:435)
+at com.zimplistic.rotimatic.testcases.WiFi_Configuration.configureToRotimaticFromHomeScreen(WiFi_Configuration.java:344)
+at com.zimplistic.rotimatic.testcases.WiFi_Configuration.testRemoteControlState(WiFi_Configuration.java:221)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoteControlState -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.zimplistic.rotimatic.testcases.RemoteControlWidget@ae45eb6]" name="teardown" is-config="true" duration-ms="1" started-at="2018-07-04T07:20:58Z" finished-at="2018-07-04T07:20:58Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.zimplistic.rotimatic.testcases.WiFi_Configuration@ae45eb6]" name="teardown" is-config="true" duration-ms="1" started-at="2018-07-06T09:57:02Z" finished-at="2018-07-06T09:57:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.zimplistic.rotimatic.testcases.RemoteControlWidget -->
-    </test> <!-- Test on Samsung S7 -->
+      </class> <!-- com.zimplistic.rotimatic.testcases.WiFi_Configuration -->
+    </test> <!-- Test on Moto G5 -->
   </suite> <!-- Suite -->
 </testng-results>

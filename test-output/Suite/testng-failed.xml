@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="1" name="Test on Samsung S7(failed)" parallel="tests">
+  <test thread-count="1" name="Test on Moto G5(failed)" parallel="tests">
     <parameter name="password" value="asdf"/>
-    <parameter name="deviceNAME" value="ce0716070c14832902"/>
-    <parameter name="platform" value="Android 6"/>
-    <parameter name="systemPort" value="8200"/>
-    <parameter name="username" value="ios3@mailinator.com"/>
+    <parameter name="serialNumber" value="7500000F"/>
+    <parameter name="deviceNAME" value="ZY3227XH6M"/>
+    <parameter name="platform" value="Android 7.0"/>
+    <parameter name="systemPort" value="8299"/>
+    <parameter name="username" value="1ios@mailinator.com"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget">
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration">
         <methods>
-          <include name="testRemoteControlState"/>
-          <include name="settingsScreen"/>
+          <include name="testRemoteControlState" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="testLogin" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.zimplistic.rotimatic.testcases.RemoteControlWidget -->
+      </class> <!-- com.zimplistic.rotimatic.testcases.WiFi_Configuration -->
     </classes>
-  </test> <!-- Test on Samsung S7(failed) -->
+  </test> <!-- Test on Moto G5(failed) -->
 </suite> <!-- Failed suite [Suite] -->

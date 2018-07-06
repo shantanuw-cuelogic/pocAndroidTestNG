@@ -2,32 +2,34 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" thread-count="1" parallel="tests" verbose="1">
 
-
+<!--
   <test name="Test on Samsung S7">
   <parameter name="platform" value="Android 6"/>
   <parameter name="deviceNAME" value="ce0716070c14832902"/>
   <parameter name="systemPort" value="8200"/>
   <parameter name="username" value="ios3@mailinator.com"/>
   <parameter name="password" value="asdf"/>
+  <parameter name="serialNumber" value="7500000F"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget"/>
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration"/>
     </classes>
   </test>
+-->
 
 
 
-<!--
   <test name="Test on Moto G5">
   <parameter name="platform" value="Android 7.0"/>
   <parameter name="deviceNAME" value="ZY3227XH6M"/>
   <parameter name="systemPort" value="8299"/>
-  <parameter name="username" value="ios17@mailinator.com"/>
+  <parameter name="username" value="1ios@mailinator.com"/>
   <parameter name="password" value="asdf"/>
+  <parameter name="serialNumber" value="7500000F"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget"/>
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration"/>
     </classes>
   </test>
--->
+
 
  
 <!--
@@ -38,7 +40,7 @@
   <parameter name="username" value="qa@os5.com"/>
   <parameter name="password" value="asdf"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.parallelPOC"/>
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration"/>
     </classes>
   </test>
  --> 
@@ -52,7 +54,7 @@
   <parameter name="username" value="qa@os6.com"/>
   <parameter name="password" value="asdf"/>
     <classes>
-      <class name="com.zimplistic.rotimatic.testcases.RemoteControlWidget"/>
+      <class name="com.zimplistic.rotimatic.testcases.WiFi_Configuration"/>
     </classes>
   </test>
 -->

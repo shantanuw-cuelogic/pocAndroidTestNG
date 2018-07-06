@@ -24,8 +24,10 @@ public class WiFi_Configuration implements Constants {
 	LoginPage loginpage = new LoginPage();
 	AndroidDriver<MobileElement> ad;
 	String state;
-	String serialNumber = "N/A";
+	String srNumber = "N/A";
 	Dimension size;
+	String ssid = "Cuelogic";
+	String password = "asdf";
 
 	WebElement signIn, email, passkey, login, hammenu, tapUserGuideScreen;
 
@@ -82,6 +84,22 @@ public class WiFi_Configuration implements Constants {
 		} else
 			System.out.println("User is on Home screen");
 
+		// No internet alert
+
+		if (!ad.findElementsById("android:id/alertTitle").isEmpty()) { // check for title
+			System.out.println("No internet alert displayed");
+			BaseSetupManager.getScreenshot(ad, Constants.FOLDER_LOGIN);
+			// WiFi settings
+			ad.findElementById("android:id/button1").click();
+			ad.findElementByXPath("//*[@text='" + ssid + "']").click();
+			Thread.sleep(5000);
+			// Connect
+			if (!ad.findElementsById("android:id/button1").isEmpty())
+				ad.findElementById("android:id/button1").click();
+			ad.navigate().back();
+			ad.navigate().back();
+		}
+
 		// Check (RC user guide screens)
 
 		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/image").isEmpty()) {
@@ -121,8 +139,8 @@ public class WiFi_Configuration implements Constants {
 		BaseSetupManager.getScreenshot(ad, Constants.FOLDER_SETTINGS);
 
 		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvSerialNumber").isEmpty()) {
-			serialNumber = ad.findElementById("com.zimplistic.rotimaticmobile:id/tvSerialNumber").getText();
-			System.out.println("Serial Number - " + serialNumber);
+			srNumber = ad.findElementById("com.zimplistic.rotimaticmobile:id/tvSerialNumber").getText();
+			System.out.println("Serial Number - " + srNumber);
 
 			/*
 			 * if (serialNumber.equalsIgnoreCase("N/A") ||
@@ -141,8 +159,9 @@ public class WiFi_Configuration implements Constants {
 		ad.navigate().back();
 	}
 
+	@Parameters({ "serialNumber" })
 	@Test(priority = 3)
-	public void testRemoteControlState() throws Exception {
+	public void testRemoteControlState(String serialNumber) throws Exception {
 
 		System.out.println("RC test started");
 		BaseSetupManager.getScreenshot(ad, Constants.FOLDER_REMOTE_CONTROL);
@@ -199,14 +218,14 @@ public class WiFi_Configuration implements Constants {
 		if (state.contains("Not configured")) {
 			System.out.println("User is not associated to any Rotimatic");
 
-			configureToRotimaticFromHomeScreen();
+			configureToRotimaticFromHomeScreen(serialNumber);
 		}
 
 		System.out.println("End of RC widget test");
 
 	}
 
-	private void configureToRotimaticFromHomeScreen() throws Exception {
+	private void configureToRotimaticFromHomeScreen(String serialNumber) throws Exception {
 		System.out.println("WiFi configuration started from Home screen");
 
 		System.out.println("Setup Rotimatic");
@@ -246,13 +265,12 @@ public class WiFi_Configuration implements Constants {
 
 			if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/action_refresh").isEmpty()) {
 				System.out.println("Trying to click on Refresh icon 1st time");
-				Thread.sleep(3000);
 				ad.findElementById("com.zimplistic.rotimaticmobile:id/action_refresh").click();
+				Thread.sleep(5000);
 
 				System.out.println("Trying to click on Refresh icon 2nd time");
-				Thread.sleep(3000);
 				ad.findElementById("com.zimplistic.rotimaticmobile:id/action_refresh").click();
-
+				Thread.sleep(5000);
 			}
 		}
 
@@ -286,7 +304,7 @@ public class WiFi_Configuration implements Constants {
 		// Rotimatic WiFi available
 
 		System.out.println("Rotimatic WiFi available ..");
-
+		BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
 		/*
 		 * String RT_WiFi =
 		 * ad.findElementById("com.zimplistic.rotimaticmobile:id/tvWifiName").getText();
@@ -297,41 +315,45 @@ public class WiFi_Configuration implements Constants {
 		 * System.out.println("List text " + RT_list);
 		 */
 
-		ad.findElementByXPath("//*[@text='Rotimatic 7500000F']").click();
+		String rtSerialNumber = "Rotimatic " + serialNumber;
+
+		ad.findElementByXPath("//*[@text='" + rtSerialNumber + "']").click();
 		System.out.println("Waiting to connect with Rotimatic WiFi");
-		Thread.sleep(18000);
+		BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
+		Thread.sleep(22000);
+		BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
+		// handle unable to connect selected network toast
 
 		// com.zimplistic.rotimaticmobile:id/tvChangeNetwork
 
 		// Checking for select WiFi alert is present or not ?
 
-		// com.zimplistic.rotimaticmobile:id/tvTitle
-		// Select Home Wi-Fi
+		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/action_refresh").isEmpty()) {
+			System.out.println("Trying to click on Refresh icon again");
+			ad.findElementById("com.zimplistic.rotimaticmobile:id/action_refresh").click();
+			Thread.sleep(5000);
 
-		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvChangeNetwork").isEmpty())
-			ad.findElementById("com.zimplistic.rotimaticmobile:id/tvChangeNetwork").click();
+			ad.findElementByXPath("//*[@text='" + rtSerialNumber + "']").click();
+			System.out.println("Waiting to connect with Rotimatic WiFi");
+			BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
+			Thread.sleep(20000);
+			BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
 
-		// ad.findElementById("com.zimplistic.rotimaticmobile:id/tvNetworkName")
-		Thread.sleep(2000);
+		}
 
-		// Need to use scroll if Given WiFi not found in list
-		ad.findElementByXPath("//*[@text='Cuelogic']").click();
-		Thread.sleep(1000);
-		ad.findElementById("com.zimplistic.rotimaticmobile:id/edtHomeWifiPassword").sendKeys("password");
+		connectToRT();
 
-		// Keyboard button OK is at right bottom corner
-
-		size = ad.manage().window().getSize();
-		int x = size.getWidth() - 20;
-		int y = size.getHeight() - 40;
-		// System.out.println("X = " + x + "Y = " + y);
-
-		TouchAction a = new TouchAction(ad);
-		a.tap(x, y).perform();
-
-		Thread.sleep(2000);
-		BaseSetupManager.getScreenshot(ad, FOLDER_WIFI_CONFIG);
 		System.out.println("Rotimatic trying to connect to server");
+
+		if (!ad.findElementsById("android:id/button1").isEmpty()) {
+			System.out.println("Alert! You are not connected to Rotimatic WiFi.");
+			ad.findElementById("android:id/button1").click();
+			ad.findElementByClassName("android.widget.ImageButton").click(); // back icon
+
+			System.out.println("retrying process");
+			connectToRT();
+		}
+
 		Thread.sleep(40000);
 		System.out.println("Check WiFI config status");
 		Thread.sleep(10000);
@@ -340,21 +362,34 @@ public class WiFi_Configuration implements Constants {
 		// Check success or failure result here
 
 		// Reconnect screen on failure
-		if(!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvRetryConnect").isEmpty()) {
+		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvRetryConnect").isEmpty()) {
 			BaseSetupManager.getScreenshot(ad, Constants.FOLDER_WIFI_CONFIG);
 			System.out.println("oops, something went wrong screen displayed");
 			ad.findElementById("com.zimplistic.rotimaticmobile:id/tvRetryConnect").click();
 			System.out.println("Clicked on Reconnect screen");
 			ad.findElementById("com.zimplistic.rotimaticmobile:id/tvPositive").click();
 			System.out.println("Clicked on Okay alert");
-			
-			// Skip setup
-			
-			Assert.fail("WiFi configuration failed");
-			
-		}
 
-		
+			// Skip setup link
+			if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvBottomText").isEmpty()) {
+				System.out.println("Skipping setup");
+				ad.findElementById("com.zimplistic.rotimaticmobile:id/tvBottomText").click();
+
+				// Yes
+				ad.findElementById("com.zimplistic.rotimaticmobile:id/tvPositive").click();
+
+				// Got It
+				ad.findElementById("com.zimplistic.rotimaticmobile:id/tvPositive").click();
+
+				Thread.sleep(2000);
+				signOut();
+
+			}
+
+			Assert.fail("WiFi configuration failed,oops, something went wrong screen displayed for Rotimatic "
+					+ serialNumber);
+
+		}
 
 		// In RC build, // Check (RC user guide screens)
 		Thread.sleep(5000);
@@ -382,10 +417,37 @@ public class WiFi_Configuration implements Constants {
 		// Check on settings screen
 
 		settingsScreen();
-		if (serialNumber.contains("7500000F"))
-			System.out.println("WiFi Configuration done successfully");
+		if (srNumber.contains(serialNumber))
+			System.out.println("WiFi Configuration done successfully for Rotimatic " + serialNumber);
 		else
 			Assert.fail("WiFi configuration fails, took time more than 1 minute");
+
+	}
+
+	private void connectToRT() throws Exception {
+		if (!ad.findElementsById("com.zimplistic.rotimaticmobile:id/tvChangeNetwork").isEmpty())
+			ad.findElementById("com.zimplistic.rotimaticmobile:id/tvChangeNetwork").click();
+
+		// ad.findElementById("com.zimplistic.rotimaticmobile:id/tvNetworkName")
+		Thread.sleep(2000);
+
+		// Need to use scroll if Given WiFi not found in list
+		ad.findElementByXPath("//*[@text='" + ssid + "']").click();
+		Thread.sleep(1000);
+		ad.findElementById("com.zimplistic.rotimaticmobile:id/edtHomeWifiPassword").sendKeys(password);
+
+		// Keyboard button OK is at right bottom corner
+
+		size = ad.manage().window().getSize();
+		int x = size.getWidth() - 20;
+		int y = size.getHeight() - 40;
+		// System.out.println("X = " + x + "Y = " + y);
+
+		TouchAction a = new TouchAction(ad);
+		a.tap(x, y).perform();
+
+		Thread.sleep(2000);
+		BaseSetupManager.getScreenshot(ad, FOLDER_WIFI_CONFIG);
 
 	}
 
@@ -449,7 +511,7 @@ public class WiFi_Configuration implements Constants {
 
 	public void signOut() throws InterruptedException {
 
-		System.out.println("Sign out test started");
+		System.out.println("Sign out started");
 		Thread.sleep(3000);
 
 		// hamburger menu icon

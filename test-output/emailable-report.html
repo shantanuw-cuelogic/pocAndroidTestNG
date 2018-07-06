@@ -9,13 +9,43 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test on Samsung S7</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">343,532</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test on Moto G5</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">324,883</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test on Samsung S7 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.zimplistic.rotimatic.testcases.RemoteControlWidget</td><td><a href="#m0">settingsScreen</a></td><td rowspan="1">1530688581104</td><td rowspan="1">49972</td></tr><tr class="passedeven"><td><a href="#m1">setup</a></td><td rowspan="1">1530688515385</td><td rowspan="1">19554</td></tr><tr class="passedeven"><td><a href="#m2">testLogin</a></td><td rowspan="1">1530688534950</td><td rowspan="1">46144</td></tr><tr class="passedeven"><td><a href="#m3">testRemoteControlState</a></td><td rowspan="1">1530688631076</td><td rowspan="1">227810</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test on Moto G5 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.zimplistic.rotimatic.testcases.WiFi_Configuration</td><td><a href="#m0">testRemoteControlState</a></td><td rowspan="1">1530870838264</td><td rowspan="1">183897</td></tr><tr><th colspan="4">Test on Moto G5 &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.zimplistic.rotimatic.testcases.WiFi_Configuration</td><td><a href="#m1">settingsScreen</a></td><td rowspan="1">1530870788634</td><td rowspan="1">49628</td></tr><tr class="passedeven"><td><a href="#m2">setup</a></td><td rowspan="1">1530870697311</td><td rowspan="1">25507</td></tr><tr class="passedeven"><td><a href="#m3">testLogin</a></td><td rowspan="1">1530870722822</td><td rowspan="1">65809</td></tr></tbody>
 </table>
-<h2>Test on Samsung S7</h2><h3 id="m0">com.zimplistic.rotimatic.testcases.RemoteControlWidget#settingsScreen</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.zimplistic.rotimatic.testcases.RemoteControlWidget#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>Android 6</td><td>ce0716070c14832902</td><td>8200</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.zimplistic.rotimatic.testcases.RemoteControlWidget#testLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>ios3@mailinator.com</td><td>asdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.zimplistic.rotimatic.testcases.RemoteControlWidget#testRemoteControlState</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test on Moto G5</h2><h3 id="m0">com.zimplistic.rotimatic.testcases.WiFi_Configuration#testRemoteControlState</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>7500000F</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.50 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;shantanu-pc&apos;, ip: &apos;169.254.224.138&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=D:\Android\Sdk\build-tools\rc-4.6.apk, appPackage=com.zimplistic.rotimaticmobile, appActivity=com.zimplistic.rotimaticmobile.activity.SplashActivity, noReset=true, platformVersion=7.0, automationName=uiautomator2, unicodeKeyboard=false, udid=ZY3227XH6M, platformName=Android, deviceName=Android test, platform=ANY, systemPort=8299}]
+Session ID: 2260444e-a6ab-4b87-adc4-de08551b26a6
+*** Element info: {Using=xpath, value=//*[@text=&apos;Cuelogic&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at com.zimplistic.rotimatic.testcases.WiFi_Configuration.connectToRT(WiFi_Configuration.java:435)
+	at com.zimplistic.rotimatic.testcases.WiFi_Configuration.configureToRotimaticFromHomeScreen(WiFi_Configuration.java:344)
+	at com.zimplistic.rotimatic.testcases.WiFi_Configuration.testRemoteControlState(WiFi_Configuration.java:221)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.zimplistic.rotimatic.testcases.WiFi_Configuration#settingsScreen</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.zimplistic.rotimatic.testcases.WiFi_Configuration#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>Android 7.0</td><td>ZY3227XH6M</td><td>8299</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.zimplistic.rotimatic.testcases.WiFi_Configuration#testLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>1ios@mailinator.com</td><td>asdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
